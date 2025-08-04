@@ -6,7 +6,7 @@ import Citiesnames from "./citiesname";
 function WeatherApp() {
   const [city, setCity] = useState("");
   const [info, setInfo] = useState(null);
-  const [isNightMode, setIsNightMode] = useState(false);
+  const [isNightMode, setIsNightMode] = useState(true);
 
   const cityHandler = (event) => {
     setCity(event.target.value);
