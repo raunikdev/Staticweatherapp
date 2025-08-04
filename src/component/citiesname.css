@@ -1,0 +1,15 @@
+.hide-info{
+    display: none
+}
+.show-info{
+    display: block;
+}
+.show-hide-button{
+    padding: 6px 16px;
+    font-size: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(56, 56, 56);
+}

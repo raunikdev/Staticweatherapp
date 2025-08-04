@@ -1,10 +1,25 @@
+import {useState} from 'react'
+
+import './citiesname.css'
+
 function Citiesnames(){
+    const [visibilityCities,setVisibilityCities] = useState(true);
+    const buttonDisplayHandler =() =>{
+        setVisibilityCities((prev)=>!prev)
+        console.log(visibilityCities)
+    }
     return(
         <>  
-            <h1>Info for the cities available are: </h1>
+            <h1>Info for the cities available are: 
+                <button onClick={buttonDisplayHandler} className='show-hide-button'
+                >
+                    {visibilityCities? "Show":"Hide"}
+                </button></h1>
+
             <p style={{width: "60px"
 
-            }}>delhi
+            }}
+            className={visibilityCities? "hide-info":"show-info"}>delhi
                 london
                 mumbai
                 newyork
