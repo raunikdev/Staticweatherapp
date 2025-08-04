@@ -1,6 +1,7 @@
 import { useState } from "react";
 import './weatherApp.css';
 import { weatherData } from "./weatherData";
+import Citiesnames from "./citiesname";
 
 function WeatherApp() {
   const [city, setCity] = useState("");
@@ -31,6 +32,7 @@ function WeatherApp() {
 
   return (
     <div className={isNightMode ? "night" : "day"}>
+      <h1>It is for static informations.</h1>
       <div className="input-button">
         <input
           type="text"
@@ -59,6 +61,7 @@ function WeatherApp() {
       <button className="toggle-dark-light" onClick={toggleHandler}>
         {isNightMode ? "Light" : "Dark"}
       </button>
+      <Citiesnames/>
     </div>
   );
 }
